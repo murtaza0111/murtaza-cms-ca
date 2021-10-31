@@ -1,0 +1,597 @@
+/* We will not use universal selector for giving our default design because it is generally considered
+ as the cause to slow down the process of loading the web page.  */
+
+/* ======================
+   ==  1. HTML or html ==
+   ====================== */
+
+html {
+  /* By default the font size in a web browser is 16px and when we multiply 16px * 62.5 = 10px = 1rem = */
+  font-size: 62.5%;
+  /* helps to better format boxes like divs and set the width margin and padding */
+  box-sizing: border-box;
+}
+
+/* =======================
+   ==  2. BODY or body  ==
+   ======================= */
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background: #fffdfd;
+  /* 1.6 rem = 16px */
+  font-size: 1.6rem "Roboto Slab";
+  /* helps to better format boxes like divs and set the width margin and padding */
+  box-sizing: border-box;
+  /* vh = viewport height*/
+  height: 100vh;
+  /* to eradicate the problem of default margins or padding 
+      of  any  tag or  element in a html document in browser */
+  padding: 0;
+  margin: 0;
+}
+
+/* ===============================
+   ==  3. anchor tags or links  ==
+   =============================== */
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+/* ================================================
+   ==  4. Background color of footer and header  ==
+   ================================================ */
+
+/* Navigation */
+
+nav {
+  height: 12rem;
+  box-shadow: 0 5px 5px grey;
+  background: white;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 0;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+nav a {
+  padding: 0 2rem;
+  color: #000000;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #0d5c0d;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+#logo-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+#logo-img img {
+  width: 40%;
+}
+
+#menu-icon {
+  height: 100%;
+  font-size: 2.8rem;
+  padding: 0 0.4rem;
+  color: #000000;
+  display: none;
+  align-items: center;
+}
+
+/* Search Icon */
+
+#search-icon {
+  color: #000000;
+  padding: 0 32px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#search-icon:hover {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #0d5c0d;
+}
+
+/* Slideout Menu */
+
+#slideout-menu {
+  display: none;
+  background: #2d3436;
+  z-index: 100;
+  position: fixed;
+  transition: 0.4s;
+  margin-top: 72px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  margin-top: 110px;
+  pointer-events: none;
+}
+
+#slideout-menu ul {
+  list-style: none;
+  padding: 0 32px;
+}
+
+#slideout-menu ul li {
+  padding: 8px;
+}
+
+#slideout-menu a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+#slideout-menu input {
+  width: 85%;
+  padding: 8px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ===================
+   ==  5. CSS GRID  ==
+   =================== */
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  /* fr stands for fragment*/
+  grid-template-rows: 15rem 1fr 5rem;
+  /* Their are 3 rows which are 
+        header whose height is 10rem = 100px
+        main whose height is 1 fragment
+        footer whose height is 5rem = 50px   */
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #000000;
+  font-size: 6rem;
+  font-family: "Roboto Slab", serif;
+}
+h2{
+  color: #000000;
+  font-size: 3rem;
+}
+p {
+  line-height: 1.5;
+}
+
+main {
+  margin: 0 auto;
+}
+section {
+  margin-bottom: 5%;
+}
+table{
+  width: 100%;
+  margin: 1.6rem;
+}
+td,th,tr{
+  font-size: 1.6rem;
+  padding: 1.6rem;
+
+}
+/* Inputs */
+
+input,
+textarea {
+  height: 32px;
+  padding: 0 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  border: none;
+  box-shadow: inset 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Banner */
+
+#banner {
+  width: 100vr;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: white;
+  padding-left: 4%;
+  padding-top: 5%;
+  background: url("./../img/ca.jpg") no-repeat;
+}
+
+#banner h3 {
+  border: 0.5rem solid #000000;
+  background: #d9d9d9;
+  padding: 1rem 0;
+  font-size: 2rem;
+  width: 20rem;
+  display: block;
+  text-align: center;
+}
+#banner h3:hover {
+  border-color: #0c3742;
+  color: white;
+  background: #0c3742;
+}
+
+/* Search Box */
+
+#searchbox {
+  position: fixed;
+  right: 0;
+  top: 70px;
+  width: 500px;
+  pointer-events: none;
+  z-index: 50;
+  transition: 0.4s;
+}
+
+#searchbox input {
+  height: 48px;
+  width: 100%;
+}
+
+/* Section */
+section {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 4.2rem;
+  margin-top: 13rem;
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 2rem;
+  flex-direction: row;
+}
+.section-heading_home{
+  margin-top:1rem;
+}
+
+.products_row, .product_row_home{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+  margin-bottom:3rem;
+  background: #f8f5f5;
+  box-shadow: 0.5rem 0.5rem 0.5rem grey;
+    font-size: 1.6rem;
+}
+.card:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.card-image {
+    width: 100%;
+  height: 100%;
+
+}
+.card-description{
+  margin:1.6rem;
+}
+
+.products_row_home img{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.products_row_cart{
+  flex-direction: row;
+}
+/* Button Read more */
+
+.btn-card {
+  padding: 8px 24px;
+  border: 3px solid black;
+  transition: 0.4s;
+  display: inline-block;
+  margin-bottom: 2.4rem;
+  margin-left: 2.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: white;
+}
+
+.btn-card:hover {
+  background: #008000;
+  text-decoration: none;
+  padding: 8px 64px 8px 24px;
+  color: white;
+}
+
+/* Checkout */
+.checkout-items .heading {
+  font-size: 2rem;
+}
+.checkout-items input,
+.checkout-items textarea {
+  width: 100%;
+  margin: 1rem;
+}
+
+
+.checkout-form-ecvv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+.checkout-form-ecvv div {
+  width: 100%;
+}
+.checkout-form-ecvv input {
+  width: 100%;
+  margin:1rem;
+}
+.checkout-form-ecvv .cvv{
+  width: 45%;
+}
+.checkout-btn{
+  width: 100%;
+}
+.submit-btn{
+  background-color: #81bb0d;
+  color: #ffffff;
+  width: 30%;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border-radius: 3rem;
+  width: 30%;
+  margin: auto;
+}
+.totalRecipt{
+  margin:3rem;
+}
+/* Footer */
+
+footer {
+  background: #333333;
+  padding: 0px 80px;
+  color: white;
+  width: 100%;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+}
+
+footer #left-footer {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+footer #left-footer ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+
+footer #right-footer {
+  flex: 2;
+  padding: 8px;
+  text-align: center;
+}
+
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github {
+  color: #fff;
+  transition: 0.4s;
+}
+
+footer #social-media-footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+footer #social-media-footer ul li {
+  font-size: 5rem;
+  padding: 1.6rem;
+  transition: 0.4s;
+}
+
+footer #social-media-footer ul li:hover a .fa-youtube {
+  color: red;
+}
+
+footer #social-media-footer ul li:hover a .fa-facebook {
+  color: #3b5998;
+}
+
+footer #social-media-footer ul li:hover a .fa-github {
+  color: #000;
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+
+  #menu-icon {
+    display: flex;
+  }
+
+  #slideout-menu {
+    display: block;
+  }
+
+  #searchbox {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  main {
+    width: 95%;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  .card,
+  .card .card-image img {
+    width: 100%;
+  }
+
+
+  footer {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer #left-footer {
+    margin: auto;
+    width: 100%;
+    flex: 1;
+    border-right: 0;
+    padding-left: 0;
+    padding: 0;
+  }
+
+  footer #right-footer a {
+    width: 100%;
+    font-size: 1rem;
+    color: black;
+  }
+
+  footer #social-media-footer a .fa-facebook,
+  footer #social-media-footer a .fa-youtube,
+  footer #social-media-footer a .fa-github {
+    color: black;
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+  .heading {
+    margin-bottom: 50px;
+  }
+  #banner {
+    width: 100%;
+    height: 40vh;
+    padding-top: 120px;
+    text-align: center;
+    display: "flex";
+    align-items: center;
+    justify-content: center;
+  }
+  #banner img {
+    display: none;
+  }
+  #banner h3 {
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .contact {
+    margin-top: -50px;
+  }
+  .contact input,
+  .contact textarea {
+    width: 80%;
+  }
+  .card {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+.checkout-form-ecvv {
+
+  width: 87%;
+}
+  #logo-img {
+    padding: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    width: 95%;
+  }
+  .card {
+    width: 45%;
+  }
+  .card .card-image img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 85%;
+  }
+}
