@@ -21,8 +21,9 @@ https://murtaza-cms-ca.netlify.app/
 
 You can list a the tech stack that you've used over here
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- [HTML]
+- [CSS]
+- [Javascript]
 
 ## Getting Started
 
@@ -39,9 +40,5 @@ cd murtaza-cms-ca
 ```   
 4.  Run this command in terminal
 ```bash
-npm install
+start live server
 ```
-5.  Run the project
-```bash
-npm start
-```  
